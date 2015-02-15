@@ -9,6 +9,7 @@
     tools:context="edu.ncsu.soc.project2.part2.Checker" >
 
     <TextView
+        android:id="@+id/activity_checker_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
