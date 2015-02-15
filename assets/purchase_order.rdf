@@ -1,0 +1,48 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:owl="http://www.w3.org/2002/07/owl#" 
+	xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+	xmlns="http://csc750/p2/reference.owl#" 
+	xml:base="http://csc750/p2/reference.owl">
+	
+	<PurchaseOrder rdf:ID="PurchaseOrder1">		
+		<hasItem>
+			<Item rdf:ID="Tires">
+				<hasQuantity>
+					<Quantity>3</Quantity>
+				</hasQuantity>
+				<unitPrice>
+					<float>39.99</float>
+				</unitPrice>
+				<PartNumber>
+					<int>543</int>
+				</PartNumber>
+			</Item>
+		</hasItem>
+		<OrderNumber>
+			<int>123</int>
+		</OrderNumber>
+		<OrderDate>
+			<date>2015-02-14</date>
+		</OrderDate>
+	</PurchaseOrder>
+	
+	<Customer rdf:ID="Customer1">
+		<FirstName>Mike</FirstName>
+		<LastName>Hancock</LastName>
+	</Customer>
+	
+	<Shipping rdf:ID="Customer1_Shipping">
+		<shippingAddress>
+			<Address>
+				<Street>Elm</Street>
+				<City>Raleigh</City>
+				<Zip>27601</Zip>
+				<State>NC</State>
+			</Address>
+		</shippingAddress>
+	</Shipping>
+	
+</rdf:RDF>
