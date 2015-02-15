@@ -1,0 +1,20 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:owl="http://www.w3.org/2002/07/owl#" 
+	xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+	xmlns="PO_new.owl">
+	
+	<PurchaseOrder rdf:ID="PurchaseOrder1">		
+		<hasItem>
+			<Item>car1</Item>
+		</hasItem>
+		<OrderNumber>
+			<int>123</int>
+		</OrderNumber>
+		<OrderDate>
+			<date>2015-02-14</date>
+		</OrderDate>
+	</PurchaseOrder>
+</rdf:RDF>
