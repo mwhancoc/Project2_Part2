@@ -50,7 +50,7 @@ public class Checker extends Activity {
 				inputStream = assetManager.open("PO_new.owl");
 				schema.read(inputStream, null);
 				inputStream.close();
-				inputStream = assetManager.open("purchase_order.owl");
+				inputStream = assetManager.open("purchase_order.rdf");
 				data.read(inputStream, null);
 				inputStream.close();
 				

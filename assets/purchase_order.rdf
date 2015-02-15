@@ -5,7 +5,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#" 
 	xmlns:foaf="http://xmlns.com/foaf/0.1/" 
 	xmlns="http://csc750/p2/reference.owl#" 
-	xml:base="http://csc750/p2/reference.owl">
+	xml:base="PO_new.owl">
 	
 	<PurchaseOrder rdf:ID="PurchaseOrder1">		
 		<hasItem>
@@ -13,20 +13,12 @@
 				<hasQuantity>
 					<Quantity>3</Quantity>
 				</hasQuantity>
-				<unitPrice>
-					<float>39.99</float>
-				</unitPrice>
-				<PartNumber>
-					<int>543</int>
-				</PartNumber>
+				<unitPrice>39.99</unitPrice>
+				<PartNumber>543</PartNumber>
 			</Item>
 		</hasItem>
-		<OrderNumber>
-			<int>123</int>
-		</OrderNumber>
-		<OrderDate>
-			<date>2015-02-14</date>
-		</OrderDate>
+		<OrderNumber>123</OrderNumber>
+		<OrderDate>2015-02-14</OrderDate>
 	</PurchaseOrder>
 	
 	<Customer rdf:ID="Customer1">
