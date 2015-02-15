@@ -8,14 +8,14 @@
 	xml:base="http://csc750/p2/reference.owl">
 	
 	<PurchaseOrder rdf:ID="PurchaseOrder1">		
-		<hasItem>
+		<!--<hasItem>
 			<Item>car1</Item>
-		</hasItem>
+		</hasItem>-->
 		<OrderNumber>
 			<int>123</int>
 		</OrderNumber>
 		<OrderDate>
-			<date>2015-02-14</date>
+			<date>2015-02-</date>
 		</OrderDate>
 	</PurchaseOrder>
 </rdf:RDF>

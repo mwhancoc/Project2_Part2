@@ -52,7 +52,7 @@ public class Checker extends Activity {
 				inputStream.close();
 				inputStream = assetManager.open("purchase_order.owl");
 				data.read(inputStream, null);
-				
+				inputStream.close();
 				
 				Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 				reasoner = reasoner.bindSchema(schema);
@@ -62,10 +62,10 @@ public class Checker extends Activity {
 				if (validity.isValid()) {
 				    output = "OK";
 				} else {
-				    System.out.println("Conflicts");
+				    output = "Conflicts";
 				    for (Iterator<Report> i = validity.getReports(); i.hasNext(); ) {
 				        ValidityReport.Report report = (ValidityReport.Report)i.next();
-				        output = report.toString();
+				        output += report.toString();
 				    }
 				}
 				
