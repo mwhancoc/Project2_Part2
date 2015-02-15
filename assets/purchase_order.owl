@@ -13,8 +13,12 @@
 				<hasQuantity>
 					<Quantity>3</Quantity>
 				</hasQuantity>
-				<unitPrice>39.99</unitPrice>
-				<PartNumber>543</PartNumber>
+				<unitPrice>
+					<float>39.99</float>
+				</unitPrice>
+				<PartNumber>
+					<int>543</int>
+				</PartNumber>
 			</Item>
 		</hasItem>
 		<OrderNumber>
