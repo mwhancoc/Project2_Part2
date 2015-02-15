@@ -33,10 +33,10 @@
 	<Shipping rdf:ID="Customer1_Shipping">
 		<shippingAddress>
 			<Address>
-				<Street>'123 Elm Street'</Street>
-				<City>'Raleigh'</City>
-				<Zip>'27601'</Zip>
-				<State>'NC'</State>
+				<Street>Elm</Street>
+				<City>Raleigh</City>
+				<Zip>27601</Zip>
+				<State>NC</State>
 			</Address>
 		</shippingAddress>
 	</Shipping>
