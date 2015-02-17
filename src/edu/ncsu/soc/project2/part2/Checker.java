@@ -25,6 +25,7 @@ import com.hp.hpl.jena.datatypes.xsd.*;
 import android.app.Activity;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -51,10 +52,10 @@ public class Checker extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_checker);
 		
+		// for our output
 		TextView textView = (TextView) findViewById(R.id.activity_checker_text_view);
 		
-		//works! next open a file and print to the textView 
-		//textView.setText("Hey Mike!");
+		textView.setMovementMethod(new ScrollingMovementMethod());
 		
 		// open demoData.rdf
 		// create an empty model
@@ -66,6 +67,7 @@ public class Checker extends Activity {
 		InputStream inputStream;
 		
 			try {
+				// read in both the owl schema and instance document
 				inputStream = assetManager.open("PO_new.owl");
 				schema.read(inputStream, null);
 				inputStream.close();
@@ -73,10 +75,12 @@ public class Checker extends Activity {
 				data.read(inputStream, null);
 				inputStream.close();
 				
+				// construct a reasoner then bind to our schema to create an inference model
 				Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 				reasoner = reasoner.bindSchema(schema);
 				InfModel infmodel = ModelFactory.createInfModel(reasoner, data);
 				
+				// run a validity report, if valid parse instance document and output data
 				ValidityReport validity = infmodel.validate();
 				if (validity.isValid()) {
 				    output = "Order Confirmed";
@@ -141,6 +145,7 @@ public class Checker extends Activity {
 					    
 					}
 				
+					// build the output for a parsed purchase order
 					output += "\nOrder Number: " + orderNumber;					
 					output += "\nOrder Date: " + sdf.format(orderDate);
 					output += "\nFirst Name: " + firstName;
@@ -152,10 +157,10 @@ public class Checker extends Activity {
 					//output += "\nUnit Price: " + unitPrice;	
 					
 				} else {
-				    output = "Conflicts";
+				    output = "Invalid Order\n\n";
 				    for (Iterator<Report> i = validity.getReports(); i.hasNext(); ) {
 				        ValidityReport.Report report = (ValidityReport.Report)i.next();
-				        output += report.toString();
+				        output += report.toString() + "\n";
 				    }
 				}
 				
