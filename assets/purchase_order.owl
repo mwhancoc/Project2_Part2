@@ -10,23 +10,14 @@
 	<PurchaseOrder rdf:ID="PurchaseOrder1">		
 		<hasItem>
 			<Item rdf:ID="Tires">
-				<hasQuantity>
-					<Quantity>3</Quantity>
-				</hasQuantity>
-				<unitPrice>
-					<float>39.99</float>
-				</unitPrice>
-				<PartNumber>
-					<int>543</int>
-				</PartNumber>
+				<ItemName>Tires</ItemName>
+				<Quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</Quantity>
+				<unitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">39.99</unitPrice>
+				<PartNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">543</PartNumber>
 			</Item>
 		</hasItem>
-		<OrderNumber>
-			<int>123</int>
-		</OrderNumber>
-		<OrderDate>
-			<date>2015-02-14</date>
-		</OrderDate>
+		<OrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">123</OrderNumber>
+		<OrderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-14</OrderDate>
 	</PurchaseOrder>
 	
 	<Customer rdf:ID="Customer1">
