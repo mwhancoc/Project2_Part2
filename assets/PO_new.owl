@@ -17,7 +17,6 @@
 		<rdfs:domain rdf:resource="#Item"/>
 	</owl:DatatypeProperty>
 	<owl:ObjectProperty rdf:ID="hasItem">
-		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
 		<rdfs:range rdf:resource="#Item"/>
 		<rdfs:domain rdf:resource="#PurchaseOrder"/>
 	</owl:ObjectProperty>
@@ -65,11 +64,9 @@
 		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
 		<rdfs:domain rdf:resource="#Item"/>
 	</owl:DatatypeProperty>
-	
-	<!--
 	<owl:Restriction>
       <owl:onProperty rdf:resource="#hasItem"/>  
       <owl:cardinality 
         rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    </owl:Restriction>-->
+    </owl:Restriction>
 </rdf:RDF>

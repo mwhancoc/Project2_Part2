@@ -170,7 +170,7 @@ public class Checker extends Activity {
 			}			
 			
 			textView.setText(output);
-			System.out.println(output);
+			//System.out.println(output);
 	}	
 	
 	@Override
