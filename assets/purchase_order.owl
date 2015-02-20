@@ -16,6 +16,7 @@
 				<PartNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">543</PartNumber>
 			</Item>
 		</hasItem>
+	
 		<OrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">123</OrderNumber>
 		<OrderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-14</OrderDate>
 	</PurchaseOrder>
